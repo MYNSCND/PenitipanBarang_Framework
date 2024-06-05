@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*nav*/
+
+body{
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0px;
+}
+
+.header {
+    /*position: fixed;8*/
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 25px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100px;
+}
+
+
+.logo{
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: whitesmoke;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+/*admin*/
+.home-section {
+	position: relative;
+	background: transparent;
+    background-size: cover;
+	min-height: 100vh;
+	width: calc(100% - 10%);
+	left: 100px;
+	transition: all 0.5s ease;
+}
+
+.home-section nav {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	background: transparent;
+    background-size: cover;
+	display: flex;
+	align-items: center;
+	width: calc(100%);
+	left: 100px;
+	z-index: 100;
+	padding: 0 20px;
+	transition: all 0.5s ease;
+}
+
+.home-section nav .profile-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #000000;
+	border: 2px solid #5f5f5f;
+	border-radius: 6px;
+	height: 50px;
+	min-width: 190px;
+}
+
+nav .profile-details .admin_name {
+	font-size: 15px;
+	font-weight: 500;
+	color: #ffffff;
+	white-space: nowrap;
+}
+
+.home-section .home-content {
+    color: white;
+	position: relative;
+	padding-top: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.table-data {
+	text-align: center;
+	border-collapse: collapse;
+	width: 100%;
+    background-color: #5f5f5f;
+}
+
+.btn {
+	background-color: white;
+	color: black;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn a {
+	text-decoration: none;
+	color: black;
+}
+
+.btn-tambah {
+	margin: 10px 0;
+}
+
+.btn-simpan {
+	width: 100%;
+}
+
+.btn:hover {
+	background-color: gray;
+}
+
+th, td {
+	border: 1px solid white;
+	padding: 5px 20px;
+}
+.form-login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: transparent;
+	padding: 30px;
+	margin: 10px auto;
+	border-radius: 10px;
+}
+.input {
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid rgb(148, 148, 148);
+}
+.btn-input-name {
+	background-color: transparent;
+	outline: none;
+	color: blue;
+	border: none;
+}
+/* CRUD */
+.btn-edit,
+.btn-delete {
+   padding: 8px 16px;
+   margin-right: 8px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: background-color 0.3s;
+}
+
+.btn-edit {
+   background-color: #4caf50; /* Green */
+   color: white;
+}
+
+.btn-delete {
+   background-color: #f44336; /* Red */
+   color: white;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+   background-color: #45a049; /* Darker green */ 
+}
+
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+
+	.home-section {
+		width: calc(100% - 60px);
+		left: 60px;
+	}
+	
+	.home-section nav {
+		width: calc(100% - 60px);
+		left: 60px;
+	}
+	
+}
+@media (max-width: 700px) {
+	nav .profile-details {
+		display: none !important;
+	}
+	.home-section nav .profile-details {
+		height: 50px;
+		min-width: 40px;
+	}
+}
+@media (max-width: 550px) {
+	.profile-details {
+		display: none !important;
+	}
+}
+@media (max-width: 400px) {
+	
+	.home-section {
+		width: 100%;
+		left: 0;
+	}
+	
+	.home-section nav {
+		width: 100%;
+		left: 0;
+	}
+	
+}
+
+/* widget */
+
+.map{
+	display: flex;
+    flex-direction: column;
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0,2);
+    margin-right:20px
+}
+
+.home-section .grafik{
+	display: flex;
+	background-color: transparent;
+	border-radius: 0px;
+	padding: 20px;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 50px;
+    margin-right: 150px;
+}
