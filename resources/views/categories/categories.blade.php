@@ -9,6 +9,9 @@ Categories | Admin Penitipan
 <button type="button" class="btn btn-tambah">
   <a href="/category/tambah">Tambah Data</a>
 </button>
+<button type="button" class="btn btn-tambah">
+        <a href="/category/cetak">Cetak</a>
+</button>
 <table class="table-data">
   <thead>
     <tr>

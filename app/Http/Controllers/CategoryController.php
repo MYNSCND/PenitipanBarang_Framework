@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class CategoryController extends Controller
 {
@@ -92,5 +93,14 @@ class CategoryController extends Controller
         $category->delete();
         return redirect('/category');
     }
+
+    public function cetak()
+    {
+        set_time_limit(0);
+        $category = Category::all();
+        $pdf = Pdf::loadview('categories.categories-cetak', compact('category'));
+        return $pdf->download('laporan-kategori.pdf');
+    }
+
 
 }
